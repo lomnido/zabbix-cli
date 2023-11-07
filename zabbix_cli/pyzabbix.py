@@ -89,9 +89,9 @@ class ZabbixAPI(object):
 
             self.auth = ''
             if self.use_authenticate:
-                self.auth = self.user.authenticate(user=user, password=password)
+                self.auth = self.user.authenticate(username=user, password=password)
             else:
-                self.auth = self.user.login(user=user, password=password)
+                self.auth = self.user.login(username=user, password=password)
         else:
             self.auth = auth_token
             self.api_version()
